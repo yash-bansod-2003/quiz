@@ -15,6 +15,8 @@ export default async function DashboardPage() {
     }
 
     return (
-        <h1>Dashboard Page</h1>
+        <main className="max-w-7xl mx-auto p-8">
+
+        </main>
     );
 }
