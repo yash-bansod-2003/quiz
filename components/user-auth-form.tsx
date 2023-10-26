@@ -29,6 +29,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     })
     const [isLoading, setIsLoading] = React.useState<boolean>(false)
     const [isGitHubLoading, setIsGitHubLoading] = React.useState<boolean>(false)
+    const [isGoogleHubLoading, setIsGoogleHubLoading] = React.useState<boolean>(false)
     const searchParams = useSearchParams()
 
     async function onSubmit(data: FormData) {
@@ -106,7 +107,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                     setIsGitHubLoading(true)
                     signIn("github")
                 }}
-                disabled={isLoading || isGitHubLoading}
+                disabled={isLoading || isGitHubLoading || isGoogleHubLoading}
             >
                 {isGitHubLoading ? (
                     <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
@@ -114,6 +115,22 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
                     <Icons.gitHub className="mr-2 h-4 w-4" />
                 )}{" "}
                 Github
+            </button>
+            <button
+                type="button"
+                className={cn(buttonVariants({ variant: "outline" }))}
+                onClick={() => {
+                    setIsGitHubLoading(true)
+                    signIn("google")
+                }}
+                disabled={isLoading || isGitHubLoading || isGoogleHubLoading}
+            >
+                {isGoogleHubLoading ? (
+                    <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                ) : (
+                    <Icons.gitHub className="mr-2 h-4 w-4" />
+                )}
+                Google
             </button>
         </div>
     )
