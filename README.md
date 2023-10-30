@@ -1,22 +1,25 @@
-# next-template
+# Quiz App
 
-A Next.js 13 template for building apps with Radix UI and Tailwind CSS.
+The Advanced Quiz webapp which comes with AI integration and built with some trending and amazing stack.
 
-## Usage
+> **Credits :**
+> All developers who developed amazing libraries 
 
-```bash
-npx create-next-app -e https://github.com/shadcn/next-template
+## Setup Locally
+
+This project is a part of my learning journey.
+
+**Install Git if not installed in your system**
+
+for linux
+
+```sh
+sudo apt install git
 ```
 
-## Features
+# Clone Repository Locally
 
-- Next.js 13 App Directory
-- Radix UI Primitives
-- Tailwind CSS
-- Icons from [Lucide](https://lucide.dev)
-- Dark mode with `next-themes`
-- Tailwind CSS class sorting, merging and linting.
+```bash
+sudo apt install git@github.com:yash-bansod-2003/quiz.git quiz-web-app
+```
 
-## License
-
-Licensed under the [MIT license](https://github.com/shadcn/ui/blob/main/LICENSE.md).
